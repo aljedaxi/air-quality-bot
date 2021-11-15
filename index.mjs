@@ -151,6 +151,7 @@ const main = ({ scheduler, bot, }) => {
 					return {city, channelId, lastValue: name}
 				})
 				.then(appendToChannels)
+				.catch(console.error)
 		}
 		bot.sendMessage (msg.chat.id, 'pardon?')
 	})
